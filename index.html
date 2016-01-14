@@ -16,8 +16,8 @@
       }
 .column:first-of-type {float:left}
 .column:last-of-type {float:right}
-.split-40 .column:first-of-type {width: 40%}
-.split-40 .column:last-of-type {width: 60%}
+.split-30 .column:first-of-type {width: 30%}
+.split-30 .column:last-of-type {width: 70%}
       .remark-code, .remark-inline-code { font-family: 'Roboto Mono'; }
     </style>
   </head>
@@ -187,8 +187,14 @@ Advice from Stitchfix
 
 ---
 
+class: split-30
+
 # Hello world in `keras`
 
+.column[
+<img src="example_network.svg" style="width:100%">
+]
+.column[
 ```python
 from keras.models import Sequential
 from keras.layers.core import Dense, Activation
@@ -199,10 +205,13 @@ model.add(Dense(output_dim=4, input_dim=3))
 model.add(Activation("tanh"))
 model.add(Dense(output_dim=2))
 model.add(Activation("softmax"))
-model.compile(loss='categorical_crossentropy', optimizer='sgd')
+model.compile(loss='categorical_crossentropy',
+    optimizer='sgd')
 
-model.fit(X_train, Y_train, nb_epoch=5, batch_size=32)
+model.fit(X_train, Y_train,
+    nb_epoch=5, batch_size=32)
 ```
+]
 
 ---
 
@@ -240,7 +249,7 @@ class: center, middle
 
 ---
 
-class: split-40
+class: split-30
 
 # Not as scary as they seem!
 
@@ -307,11 +316,9 @@ Intuition for backprop, convnets and RNNs
 
 # Links
 
-This talk
-
-Just the references
-
-Mike Williams, mike@fastforwardlabs.com, @mikepqr
+ - This talk: [mike.place/talks/insight](http://mike.place/talks/insight/)
+ - <mike@fastforwardlabs.com>
+ - [@mikepqr](https://twitter.com/mikepqr)
 
 
     </textarea>
