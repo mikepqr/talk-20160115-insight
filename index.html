@@ -47,13 +47,11 @@ class: center, middle
  - What kind of 'data scientist' are you talking to?
 --
 
-   - A quasi-academic with a PhD in machine learning who got hired at NIPS
    - A business analytics person
    - A data engineering person
    - A software engineer who taught themself statistics
    - A science PhD who taught themself to code
-   - Someone who reads Hacker News
-   - …
+   - A quasi-academic with a PhD in machine learning who got hired at NIPS
 
 ---
 
@@ -81,7 +79,6 @@ Not academia
 
 # Getting a job
 
- - Personal connections
  - Angel List
  - Salaries
    - The O'Reilly Data Science Salary Survey
@@ -125,10 +122,9 @@ Not academia
 
 # Comparison to academia
 
- - Self promotion is still important. Don't stop giving talks!
- - Your resume is not sufficient; the cover letter is more important than in academia
- - Changing jobs is easier and more common
  - The visa situation is much tougher
+ - Self promotion is still important. Don't stop giving talks!
+ - Changing jobs is easier and more common
 --
 
  - Your career options increase, and not everything has an application form. This is exciting and overwhelming. You'll get the hang of it.  
@@ -136,10 +132,7 @@ Not academia
  
     > [Harvard grads] are vulnerable to Wall Street investment firms and to
     > things like Teach for America because they have application processes at all.
-    > But life, normal adult life, doesn’t have an application process. You actually,
-    > at some point, need to figure out what you want to do and what makes you happy.
-    > You need to take a leap of faith that your native talents and desires will end
-    > you up at a reasonable and interesting place.
+    > But life, normal adult life, doesn’t have an application process.
     >
     > — [Cathy O'Neill](http://mathbabe.org/2012/02/17/how-harvard-is-failing-its-students/)
 ---
@@ -147,22 +140,6 @@ Not academia
 # Brandwatch
 
 <img src="brandwatch.png" style="width:100%">
-
-
----
-
-# Social media analytics
-
- - Brands love Twitter
-   - Non-private by default
-   - API
-   - 'Learn what people are thinking'
---
-
- - Extremely unrepresentative
- - Messy text data
- - The Twitter ecosystem is not necessarily a good long term bet
-
 
 
 ---
@@ -205,7 +182,7 @@ from keras.layers.core import Dense, Activation
 from keras.optimizers import SGD
 
 model = Sequential()
-model.add(Dense(output_dim=4, input_dim=3))
+model.add(Dense(input_dim=3, output_dim=4))
 model.add(Activation("tanh"))
 model.add(Dense(output_dim=2))
 model.add(Activation("softmax"))
